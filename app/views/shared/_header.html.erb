@@ -1,14 +1,14 @@
 <header>
     <nav style="position: relative;">
         <div class="linkusuario">
-            <%= link_to '>> Nombre Usuario', '' %>
+            <%= link_to '>> Nombre Usuario', '', :style => "position: absolute;" %>
         </div>
         <ul>
-            <li><%= link_to "INICIO", root_path %></li>
-            <li><%= link_to "ACERCA DE", /home/acercade %></li>
-            <li style="margin-top: 10px;"><%= link_to (image_tag "logo.png"), home#index %></li>
-            <li><%= link_to "SERVICIO", home#servicio %></li>
-            <li><%= link_to "CONTACTENOS", home#cont %></li>
+            <li><%= link_to "INICIO", :index %></li>
+            <li><%= link_to "ACERCA DE", :sign_in %></li>
+            <li style="margin-top: 10px;"><%= link_to (image_tag "logo.png", {:style => "padding-top: 5px;"}), root_path %></li>
+            <li><%= link_to "SERVICIO", :acercade %></li>
+            <li><%= link_to "CONTACTENOS", :contacto %></li>
         </ul>
     </nav>
 </header>

@@ -1,0 +1,23 @@
+<h3>Ingreso de Cliente</h3>
+
+<%= form_for(:client, :url => session_path(:client), html: {class: "busqueda"}) do |f| %>
+  <div class="field">
+    <%= f.label :'Correo' %>
+    <%= f.email_field :email, autofocus: true, :class=> "inputtext", :style=> "width:172px" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'Contraseña' %>
+    <%= f.password_field :password, autocomplete: "off", :class=> "inputtext", :style=> "width:172px" %>
+  </div>
+
+  
+    <div class="field">
+      <%= f.check_box :remember_me, :style => "float:left;" %> <%= f.label :'remember_me' %>
+    </div>
+  
+
+  <div class="actions">
+    <%= f.submit "Ingresar", :class=> "button", :style =>  "margin-right: 5px;" %>
+  </div>
+<% end %>

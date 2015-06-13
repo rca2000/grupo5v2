@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
     sign_in_url = '/home/acercade'
   end
   
-  def after_sign_in_path_for(user)
-    sign_in_url = '/admin'
+  def after_sign_in_path_for(administrator)
+    sign_in_url = '/home/servicio'
   end
   
 end

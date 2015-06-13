@@ -3,18 +3,73 @@
   <head>
     <meta charset="UTF-8">
     <title>MENÚ EXPRESS</title>
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    'style', media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag    'normalize', media: "all", "data-turbolinks-track" => true %>
     <%= stylesheet_link_tag    'application', media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+        <script type="text/javascript">
+
+            var doc=document.getElementById("localizacion");
+            function getLocation()
+            {
+                if (navigator.geolocation)
+                {
+                    navigator.geolocation.getCurrentPosition(showPosition,showError);
+                }
+            }
+        
+            function showPosition(position)
+            {
+                var latlon=position.coords.latitude+","+position.coords.longitude;
+        
+                var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+                +latlon+"&zoom=14&size=400x300&sensor=false";
+                document.getElementById("map").innerHTML="<img src='"+img_url+"'>";
+            }
+        
+            function showError(error)
+            {
+                switch(error.code) 
+                {
+                case error.PERMISSION_DENIED:
+                    doc.innerHTML="Request for Geolocation denied by the user."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    doc.innerHTML="Unavailable location information."
+                    break;
+                case error.TIMEOUT:
+                    doc.innerHTML="Location request timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    doc.innerHTML="UNKNOWN_ERROR."
+                    break;
+                }
+            }
+        </script>
   </head>
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    
-    <%= render "shared/header" %>
-    </header>
+<header>
+    <nav class="menuPrin">
+      <div class="conPerfil"><%= link_to "Cerrar sesión", destroy_client_session_path, method: :delete %></div>
+      <ul>
+        <li><%= link_to "INICIO", :index %></li>
+        <li><%= link_to "LOGIN RESTAURANTES", :sign_in %></li>
+        <li class="logo"><%= link_to image_tag('logo.png'), root_path %></li>
+        <li><%= link_to "ACERCA DE", :acercade %></li>
+        <li><%= link_to "CONTACTENOS", :contacto %></li>
+    </nav>
+</header>
     <%= yield %>
-    <%= render "shared/footer" %>
+<footer>
+    <ul>
+        <li style="margin: 80px 62px 10px;"><a href="index.html" style="color: #54671E;">INICIO</a></li>
+        <li style="margin: 80px 62px 10px;"><a href="acerca-de.html" style="color: #54671E;">LOGIN RESTAURANTE</a></li>
+        <li style="margin: 80px 62px 10px;"><a href="servicio.html" style="color: #54671E;">ACERCA DE</a></li>
+        <li style="margin: 80px 62px 10px;"><a href="contactenos.html" style="color: #54671E;">CONTACTENOS</a></li>
+    </ul>
+</footer>
   </body>
 </html>
