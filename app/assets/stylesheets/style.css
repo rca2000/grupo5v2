@@ -1,0 +1,321 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:#FFEEC3;
+    font-family: 'Lato', sans-serif;
+}
+footer{
+    border-top:1px solid #54671E;
+    margin-top:20px;
+    padding:20px 0;
+}
+footer ul{
+    font-size:12px;
+    list-style:none;
+    margin:auto;
+    overflow:hidden;
+    width:960px;
+}
+footer ul li{
+    float:left;
+    margin-right:10px;
+}
+footer ul li a{
+    color:#54671E;
+    text-decoration:none;
+}
+footer ul li a:hover{
+    text-decoration:underline;
+}
+header{
+    background:url(bg_menu.png) 0 0 repeat-x;
+}
+.container{
+    margin:auto;
+    width:960px;
+}
+.contReg{
+    background:#54671E;
+    border-radius:5px;
+    margin:auto;
+    padding:10px;
+    width:180px;
+}
+.menuPrin ul li{
+    float:left;
+    list-style:none;
+    margin:40px 10px 10px;
+}
+.menuPrin ul li a{
+    color:#fff;
+    text-decoration:none;
+}
+.menuPrin ul li a:hover{
+    color:#54671E;
+}
+.menuPrin ul li.logo{
+    margin-top:0 !important;
+}
+.menuPrin ul{
+    margin:auto;
+    width:793px;
+    overflow:hidden;
+}
+.main{
+    overflow:hidden;
+}
+.main .col1{
+    background:#799839;
+    border:1px solid #799839;
+    border-radius:5px;
+    float:left;
+    padding:20px;
+    width:210px;
+}
+.main .col1 .busqueda label, input, select{
+    display:block;
+}
+.main .col1 .busqueda select{
+    border-radius:5px;
+    height:22px;
+    width:180px;
+}
+.main .col1 label{
+    font-size:12px
+}
+.main .col1 .busqueda{
+    margin:auto;
+    padding-bottom:20px;
+    width:180px;
+}
+.main .col1 form label{
+    color:#fff;
+    margin:5px 0;
+}
+.main .col1 form input[type="button"]{
+    cursor:pointer;
+    margin: 6px auto;
+    background: #F48329;
+    border: 1px solid #D2640C;
+    border-radius: 5px;
+    color: #fff;
+    width: 100px;
+    height: 22px;
+}
+.main .col1 form input[type="button"]:hover{
+    background:#D2640C;
+}
+.main .col1 form input[type="text"]{
+    background: #fff;
+    border:0;
+    border-radius: 5px;
+    padding:0 4px;
+    width: 172px;
+    height: 22px;
+}
+.main .col1 .registro h3{
+    color:#fff;
+    font-size:14px;
+    margin-left:24px;
+}
+.main .col2{
+    background:#fff;
+    border:1px solid #fff;
+    border-radius:5px;
+    float:right;
+    padding-top:20px;
+    width:700px;
+}
+
+/********/
+
+.main .col2 h1{
+    color:#54671E;
+    margin:0 20px;
+}
+.main .col2 p{
+    color:#333;
+    font-size:14px;
+    margin:0 20px;
+    text-align:justify;
+}
+.camPed{
+    margin:0 40px 20px 0;
+    overflow:hidden;
+}
+.camPed input, .btnAcep, .btnCan{
+    float:right;
+    background:#F48329;
+    border:0;
+    border-radius:5px;
+    color:#fff;
+    cursor:pointer;
+    font-size:14px;
+    padding:10px 0;
+    text-align:center;
+    width:120px;
+}
+.camPed input:hover, .btnAcep:hover, .btnCan:hover{
+    background:#D2640C;
+}
+.clear{
+    clear:both;
+}
+.contFood{
+    
+}
+.contBloq{
+    border-bottom:1px solid #FFEEC3;
+    overflow:hidden;
+}
+.contBloq .food{
+    float:left;
+    margin:16px 24px;
+    width:43%;
+}
+.contBloq .food div{
+    border:10px solid #F48329;
+}
+.contBloq .food p{
+    margin:10px 0 0;
+    overflow:hidden;
+}
+.contBloq .food p .tex1{
+    color:#799839;
+    float:left;
+    font-weight:bold;
+}
+.contBloq .food p .tex2{
+    color:#F48329;
+    float:right;
+    font-weight:bold;
+}
+.contBloq .imgRest{
+    border:10px solid #F48329;
+    float:left;
+    margin:20px 0 20px 20px;
+    width:20%;
+}
+.contBloq .imgRestM{
+    border:5px solid #F48329;
+    float:left;
+    margin:0 0 20px 20px;
+    width:12%;
+}
+.contBloq .detaRest{
+    float:left;
+    height:170px;
+    margin:20px 0 0 20px;
+    position:relative;
+    width:68%;
+}
+.contBloq .detaRest h2{
+    color:#799839;
+    margin-bottom:10px;
+}
+.contBloq .detaRest h2 a{
+    color:#799839;
+    text-decoration:none;
+}
+.contBloq .detaRest h2 a:hover{
+    color:#54671E;
+}
+.contBloq .detaRest p{
+    color:#333;
+    font-size:14px;
+    margin:0 0 5px 0;
+}
+.contBloq .detaRest .verMenu{
+    background:#F48329;
+    border-radius:5px;
+    bottom:0;
+    color:#fff;
+    display:block;
+    font-size:14px;
+    padding:10px 0;
+    position:absolute;
+    right:0;
+    text-align:center;
+    text-decoration:none;
+    width:100px;
+}
+.contBloq .detaRest .verMenu:hover{
+    background:#D2640C;
+}
+.contPedi{
+    margin:0 20px;
+}
+.noBBH{
+    height:auto !important;
+    margin-top:0 !important;
+}
+.noBorBot{
+    border-bottom:0;
+}
+.noMarTop{
+    margin-top:0 !important;
+}
+.nomLis{
+    list-style:none;
+    margin:10px 0 10px 30px;
+}
+.nomLis li{
+    margin-bottom:8px;
+    overflow:hidden;
+}
+.nomLis li input[type="checkbox"]{
+    float:left;
+}
+.nomLis li span{
+    float:left;
+    font-size:14px;
+    line-height:12px;
+    margin-left:6px;
+}
+.nomMenu{
+    color:#54671E;
+    text-align:center;
+}
+.nomPla{
+    color:#799839 !important;
+    font-size:16px !important;
+    font-weight:bold;
+}
+.nomUser{
+    color:#fff;
+    margin-top:10px;
+    text-align:center;
+}
+.nomHist{
+    color:#799839;
+    font-size:16px;
+    font-weight:bold;
+    margin:10px 0;
+    border-bottom:1px solid #748A37;
+}
+.lisAd{
+    margin:10px 0;
+    padding-left:40px;
+}
+.lisAd li{
+    margin-bottom:10px;
+}
+.lisAd li a{
+    color:#D2640C;
+    text-decoration:none;
+}
+.lisAd li a:hover{
+    text-decoration:underline;
+}
+.conPerfil{
+    margin:auto;
+    overflow:hidden;
+    width:960px;
+}
+.conPerfil a{
+    color:#fff;
+    float:right;
+    text-decoration:none;
+}

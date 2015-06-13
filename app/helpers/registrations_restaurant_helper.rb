@@ -1,0 +1,2 @@
+module RegistrationsRestaurantHelper
+end

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MENÚ EXPRESS</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+    <nav class="menuPrin">
+      <div class="conPerfil"><%= link_to "Cerrar sesión", destroy_client_session_path, method: :delete %></div>
+      <ul>
+        <li><a href="home/index">INICIO</a></li>
+        <li><a href="home/acercade">ACERCA DE</a></li>
+        <li class="logo"><a href="home/index"><%= image_tag "logo.png" %></a></li>
+        <li><a href="home/servicio">SERVICIO</a></a></li>
+        <li><a href="home/contactenos">CONTACTENOS</a></a></li>
+      </ul>
+    </nav>
+</header>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+
+<footer>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acerca-de.html">Acerca de</a></li>
+        <li><a href="servicio.html">Servicio</a></li>
+        <li><a href="contactenos.html">Contáctenos</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
